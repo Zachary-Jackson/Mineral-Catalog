@@ -12,4 +12,6 @@ def detail(request, pk):
 
 def detail_home(request):
     '''This is a detail page if no mineral is selected.'''
-    return render(request, 'mineral_detail.html')
+    minerals = Mineral.objects.all()
+    return render(request, 'minerals/mineral_detail.html', {'minerals':
+                                                            minerals})

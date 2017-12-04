@@ -19,7 +19,7 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
-    url(r'^mineral/', include('minerals.urls', namespace='mineral')),
+    url(r'^mineral/', include('minerals.urls', namespace='minerals')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name='home'),
 ]
