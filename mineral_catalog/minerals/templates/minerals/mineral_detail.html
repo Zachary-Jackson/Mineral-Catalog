@@ -1,0 +1,45 @@
+{% extends "minerals/layout.html" %}
+
+{% block div %}<div class="bounds bounds--small">{% endblock %}
+
+{% block content %}
+</div>
+<div class="grid-100 mineral__container">
+<h1 class="mineral__name">{{ mineral }}</h1>
+<div class="mineral__image-bg">
+  <img class="mineral__image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Augelite-au13c.jpg/240px-Augelite-au13c.jpg">
+  <p class="mineral__caption">{{ mineral.image_caption}}</p>
+</div>
+<div class="mineral__table-container">
+  <table class="mineral__table">
+    <tr>
+      <td class="mineral__category">Category</td>
+      <td>{{ mineral.category }}</td>
+    </tr>
+    <tr>
+      <td class="mineral__category">Formula</td>
+      <td class="mineral__formula">Ca<sub>4</sub>(Al,Fe,Mg)<sub>10</sub>Si<sub>12</sub>O<sub>35</sub>(OH)<sub>12</sub>CO<sub>3</sub>·12H<sub>2</sub>O</td>
+    </tr>
+    <tr>
+      <td class="mineral__category">Strunz Classification</td>
+      <td>{{ mineral.strunz_classification }}</td>
+    </tr>
+    <tr>
+      <td class="mineral__category">Unit Cell</td>
+      <td>{{ mineral.unit_cell}}</td>
+    </tr>
+    <tr>
+      <td class="mineral__category">Color</td>
+      <td>{{ mineral.color}}</td>
+    </tr>
+    <tr>
+      <td class="mineral__category">Crystal Habit</td>
+      <td>{{ mineral.crystal_habit}}</td>
+    </tr>
+    <tr>
+      <td class="mineral__category">Mohs Scale Hardness</td>
+      <td>{{ mineral.mohs_scale_hardness}}</td>
+    </tr>
+  </table>
+</div>
+{% endblock %}
