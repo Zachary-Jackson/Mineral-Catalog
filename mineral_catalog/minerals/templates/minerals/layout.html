@@ -1,6 +1,6 @@
 {% load static from staticfiles %}
 
-<link rel="stylesheet" href="{% static 'minerals/css/global.css' %}"
+<link rel="stylesheet" href="{% static 'minerals/css/global.css' %}">
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,13 +28,7 @@
     </div>
     <div class="grid-100">
       {% block content %}
-      <ul class="minerals__container">
-        {% for mineral in minerals %}
-        <li class="minerals__item">
-          <a class="minerals__anchor" href="{% url 'minerals:detail' pk=mineral.pk %}">{{mineral.name}}</a>
-        </li>
-        {% endfor %}
-      </ul>
+      <p>This is a test.
       {% endblock content %}
     </div>
   </div>
