@@ -106,5 +106,7 @@ class MineralViewsTests(TestCase):
         resp = self.client.get(reverse('minerals:random_mineral'))
         self.assertEqual(resp.status_code, 200)
         self.assertTemplateUsed(resp, 'minerals/mineral_detail.html')
-        self.assertContains(resp, self.mineral.name or self.mineral2.name)
-        self.assertContains(resp, self.mineral.color or self.mineral2.color)
+        # The following two self.assertContains user mineral charactiristics
+        # common to both mineral and mineral2
+        self.assertContains(resp, self.mineral.optical_properties)
+        self.assertContains(resp, self.mineral.diaphaneity)
