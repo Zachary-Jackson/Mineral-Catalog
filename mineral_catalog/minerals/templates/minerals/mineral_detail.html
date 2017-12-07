@@ -12,34 +12,24 @@
 </div>
 <div class="mineral__table-container">
   <table class="mineral__table">
-    <tr>
-      <td class="mineral__category">Category</td>
-      <td>{{ mineral.category }}</td>
-    </tr>
-    <tr>
-      <td class="mineral__category">Formula</td>
-      <td class="mineral__formula">Ca<sub>4</sub>(Al,Fe,Mg)<sub>10</sub>Si<sub>12</sub>O<sub>35</sub>(OH)<sub>12</sub>CO<sub>3</sub>·12H<sub>2</sub>O</td>
-    </tr>
-    <tr>
-      <td class="mineral__category">Strunz Classification</td>
-      <td>{{ mineral.strunz_classification }}</td>
-    </tr>
-    <tr>
-      <td class="mineral__category">Unit Cell</td>
-      <td>{{ mineral.unit_cell}}</td>
-    </tr>
+    {% if mineral.color %}
     <tr>
       <td class="mineral__category">Color</td>
       <td>{{ mineral.color}}</td>
     </tr>
+    {% endif %}
+    {% if mineral.formula %}
     <tr>
-      <td class="mineral__category">Crystal Habit</td>
-      <td>{{ mineral.crystal_habit}}</td>
+      <td class="mineral__category">Formula</td>
+      <td>{{ mineral.formula}}</td>
     </tr>
+    {% endif %}
+    {% if mineral.group %}
     <tr>
-      <td class="mineral__category">Mohs Scale Hardness</td>
-      <td>{{ mineral.mohs_scale_hardness}}</td>
+      <td class="mineral__category">Group</td>
+      <td>{{ mineral.group}}</td>
     </tr>
+    {% endif %}
   </table>
 </div>
 {% endblock %}
