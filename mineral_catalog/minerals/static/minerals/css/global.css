@@ -177,10 +177,10 @@ table, p, ul { margin-bottom: 2.5rem; }
 
 .text-centered { text-align: center; }
 
-.logo { display: block; fill: #384033; position: relative; margin: 0 auto; width: 72px; }
+.logo { display: block; fill: #406b44; position: relative; margin: 0 auto; width: 72px; }
 .logo__name { margin-bottom: 0; }
 .logo__text { margin-bottom: 50px; font-size: 13px; }
-.logo--middle { fill: #406b44; }
+.logo--middle { fill: #f4b042; }
 
 .minerals__container { background-color: #fff; border-radius: 6px; list-style: none; padding: 30px 30px 20px 30px; -webkit-column-gap: 30px; -moz-column-gap: 30px; column-gap: 30px; }
 @media (min-width: 440px) and (max-width: 639px) { .minerals__container { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; } }

@@ -6,7 +6,7 @@
 {% block content %}
 </div>
 <div class="grid-100 mineral__container">
-<h1 class="mineral__name">{{ mineral|title }}</h1>
+<h1 class="mineral__name"><a href="{% url 'minerals:detail' pk=mineral.pk %}">{{ mineral|title }}</a></h1>
 <div class="mineral__image-bg">
   {% with '/minerals/images/'|add:mineral.name|add:'.jpg' as mineral_image %}
   <img class="mineral__image" src= {% static mineral_image %}>

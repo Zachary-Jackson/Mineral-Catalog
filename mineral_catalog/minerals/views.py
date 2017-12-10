@@ -21,7 +21,6 @@ def detail(request, pk):
 def random_mineral(request):
     '''This returns a random detail page for a mineral in the database.'''
     all_minerals = Mineral.objects.all()
-    length = len(all_minerals) - 1
-    mineral = all_minerals[random.randint(0, length)]
+    mineral = random.choice(all_minerals)
     return render(request, 'minerals/mineral_detail.html', {'mineral':
                                                             mineral})
